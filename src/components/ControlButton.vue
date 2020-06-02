@@ -1,15 +1,32 @@
 <template>
     <div class="btn-group">
-        <button>重置</button>
-        <button :disabled='disabled'>下一题</button>
+        <button @click='$emit("handleRest")'>重置</button>
+        <button :disabled='disabled' @click='handleNext'>{{ isFinalQuestion ? "完成问卷" : "下一题"}}</button>
     </div>
 </template>
 <script>
 export default {
     name:"ControlButton",
+    props:{
+        disabled:{
+            type:Boolean,
+            require:true
+        },
+        isFinalQuestion:{
+            type:Boolean,
+            require:true
+        }
+    },
     data:function(){
         return{
-            disabled:false
+        }
+    },
+    methods:{
+        handleNext:function(){
+            if(this.isFinalQuestion)
+                this.$emit("finishQuestionaire");
+            else
+                this.$emit("handleNext");
         }
     }
 }
@@ -20,6 +37,7 @@ export default {
         display: flex;
         justify-content: space-evenly;
         margin-bottom:10px;
+        margin-top:10px;
     }
     .btn-group button{
         font-size:3vh;
@@ -27,6 +45,7 @@ export default {
         border-radius: 0.5em;
         border:none;
         margin:10px;
+        outline: none;
     }
     .btn-group button:first-child{
         background-color:blueviolet;

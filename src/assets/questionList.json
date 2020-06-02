@@ -2,7 +2,8 @@
     {
         "id":1,
         "type":"string",
-        "question":"您的姓名："
+        "question":"您的姓名：",
+        "placeholder":"请输入您的姓名"
     },
     {
         "id":2,
@@ -18,6 +19,23 @@
     },
     {
         "id":4,
+        "type":"checkbox",
+        "question":"你认为作者是个什么样的人：",
+        "options":["八卦","机车","幽默","搞笑","友善","诚实"]
+    },
+    {
+        "id":5,
+        "type":"radio",
+        "question":"你是学生吗：",
+        "options":["是","否"]
+    },
+    {
+        "id":6,
+        "type":"string",
+        "question":"你想对作者说什么："
+    },
+    {
+        "id":7,
         "type":"text",
         "question":"简述您的愿望："
     }

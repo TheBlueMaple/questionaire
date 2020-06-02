@@ -1,0 +1,24 @@
+[   
+    {
+        "id":1,
+        "type":"string",
+        "question":"您的姓名："
+    },
+    {
+        "id":2,
+        "type":"radio",
+        "question":"您的性别：",
+        "options":["男","女"]
+    },
+    {
+        "id":3,
+        "type":"checkbox",
+        "question":"您的标签：",
+        "options":["诚实","正义","狡猾"]
+    },
+    {
+        "id":4,
+        "type":"text",
+        "question":"简述您的愿望："
+    }
+]

@@ -1,8 +1,6 @@
 # questionnaire
 
-## Demo address
 
-[click to view](http://demo.bluemaple.top/questionaire/)
 
 ## Project description
 ```
